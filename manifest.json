@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "Safe Travels",
+    "description": "Automatically redirect from adult sites to travel sites.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "declarativeNetRequest",
+        "webRequest",
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+        // "https://*/*", // Permission for all HTTPS sites (generic access)
+        // "https://www.xvideos.com/*", // Access to xvideos.com for blocking/redirecting
+        // "https://www.pornhub.com/*", // Access to pornhub.com for blocking/redirecting
+        // "https://www.xnxx.com/*", // Access to xnxx.com for blocking/redirecting
+        // "https://www.expedia.com/*", // Access to expedia.com for redirection
+        // "https://www.booking.com/*", // Access to booking.com for redirection
+        // "https://www.travelocity.com/*" // Access to travelocity.com for redirection
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    }
+}
