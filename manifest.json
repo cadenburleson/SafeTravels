@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Safe Travels",
     "description": "Automatically redirect from adult sites to travel sites.",
-    "version": "1.0",
+    "version": "0.5",
     "content_scripts": [
         {
             "matches": [

@@ -1,3 +1,6 @@
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 console.log("Service Worker Started");
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -22,6 +25,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 //     if (request.redirect) {
