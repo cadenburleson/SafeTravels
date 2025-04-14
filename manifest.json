@@ -15,22 +15,17 @@
         }
     ],
     "permissions": [
-        "declarativeNetRequest",
-        "webRequest",
-        "storage",
-        "activeTab",
-        "scripting"
+        "declarativeNetRequest"
     ],
-    "host_permissions": [
-        "<all_urls>"
-        // "https://*/*", // Permission for all HTTPS sites (generic access)
-        // "https://www.xvideos.com/*", // Access to xvideos.com for blocking/redirecting
-        // "https://www.pornhub.com/*", // Access to pornhub.com for blocking/redirecting
-        // "https://www.xnxx.com/*", // Access to xnxx.com for blocking/redirecting
-        // "https://www.expedia.com/*", // Access to expedia.com for redirection
-        // "https://www.booking.com/*", // Access to booking.com for redirection
-        // "https://www.travelocity.com/*" // Access to travelocity.com for redirection
-    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
     "background": {
         "service_worker": "background.js"
     },

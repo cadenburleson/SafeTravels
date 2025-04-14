@@ -4,6 +4,7 @@ const isPornSite = () => {
     const pornDomains = [
         /xvideos\.(com|es|fr|it|de)/i, // Matches xvideos.com, xvideos.es, xvideos.fr, etc.
         /pornhub\.com/i,
+        /xnxx.com\.com/i
         // Add other porn domains here
     ];
     const currentDomain = window.location.hostname;
